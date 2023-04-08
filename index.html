@@ -20,6 +20,7 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0"
     />
     <link rel="stylesheet" href="/src/style.css" />
+    <link rel="stylesheet" href="/src/card.css" />
   </head>
   <body>
     <nav>
@@ -52,14 +53,87 @@
               <span>Find All</span>
             </button>
             <button>
-              <img src="instagram.svg" />
-              <span> Instagram Post (Square) </span>
-              <span>1940 / 788 px</span>
+              <i class="fa-solid fa-user-doctor"></i>
+              <span> Call a Doctor </span>
+              <span>Find All</span>
             </button>
           </div>
         </div>
       </div>
     </nav>
+    <section class="header">
+      <div class="header-content">
+        <h1>OptiLife | Healthy For Life</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam quis
+          repudiandae dicta similique reiciendis perspiciatis incidunt rem
+          molestiae quia officiis itaque deserunt alias, maiores vitae laborum
+          libero fuga! Blanditiis, enim?
+        </p>
+        <!-- HTML !-->
+        <button class="button-57" role="button">
+          <span class="text">Explore</span
+          ><span><a class="a" href="#about">Start</a></span>
+        </button>
+      </div>
+    </section>
+    <div class="about" id="about">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#ffffff"
+          fill-opacity="1"
+          d="M0,64L48,74.7C96,85,192,107,288,138.7C384,171,480,213,576,197.3C672,181,768,107,864,112C960,117,1056,203,1152,197.3C1248,192,1344,96,1392,48L1440,0L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
+        ></path>
+      </svg>
+      <section class="about-content">
+        <figure class="image">
+          <img
+            src="/img/international-nurses-day-scaled.webp"
+            alt="Gambar OptiLife"
+          />
+        </figure>
+        <div class="text">
+          <h1>Tentang OptiLife</h1>
+          <p>
+            OptiLife adalah layanan kesehatan yang berfokus pada kesehatan
+            holistik untuk meningkatkan kualitas hidup pasien. Tim kami terdiri
+            dari tenaga medis yang berpengalaman dan berdedikasi dalam
+            menyediakan perawatan terbaik untuk setiap pasien.
+          </p>
+          <p>
+            Kami menyediakan berbagai layanan, termasuk pemeriksaan kesehatan,
+            konseling gizi, program pengelolaan stres, terapi fisik, serta
+            layanan kebugaran dan kesehatan lainnya. Dengan pendekatan yang
+            berbasis pada bukti ilmiah, kami berkomitmen untuk membantu pasien
+            mencapai kesehatan yang optimal.
+          </p>
+          <p>Kunjungi kami di alamat berikut:</p>
+          <p>Jl. Jend. Sudirman No. 123</p>
+          <p>Jakarta Pusat, 12345</p>
+        </div>
+      </section>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#ffffff"
+          fill-opacity="1"
+          d="M0,64L48,74.7C96,85,192,107,288,138.7C384,171,480,213,576,197.3C672,181,768,107,864,112C960,117,1056,203,1152,197.3C1248,192,1344,96,1392,48L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+      </svg>
+    </div>
+    <div class="auto-increment">
+      <div class="number-container">
+        <div class="number-box">
+          <h3>diseased person</h3>
+          <div class="number" id="clients-count">0</div>
+        </div>
+      </div>
+      <div class="number-container">
+        <div class="number-box">
+          <h3>people infected with the disease</h3>
+          <div class="number" id="our-clients-count">0</div>
+        </div>
+      </div>
+    </div>
     <section class="popoverr">
       <div class="popover">
         <img src="/img/Family photo 1.jpg" width="30%" />
@@ -67,7 +141,7 @@
           <header>
             <img src="/img/Family photo 1.jpg" width="30%" />
             <div>
-              <h2>Abdillah Naufal</h2>
+              <h2>Saramiamiaw</h2>
               <h3>Tokyo, Japan</h3>
             </div>
           </header>
@@ -82,17 +156,77 @@
         </div>
       </div>
       <button data-tooltip="Feedback">
-        <span class="material-symbols-outlined"> chat_bubble </span>
+        <span class="material-symbols-outlined" style="color: #ffc800">
+          chat_bubble
+        </span>
       </button>
       <button data-tooltip="Share">
-        <span class="material-symbols-outlined"> favorite </span>
+        <span class="material-symbols-outlined" style="color: #ffc800">
+          favorite
+        </span>
       </button>
       <button data-tooltip="Details">
-        <span class="material-symbols-outlined"> info </span>
+        <span class="material-symbols-outlined" style="color: #ffc800">
+          info
+        </span>
       </button>
       <button data-tooltip="Settings">
-        <span class="material-symbols-outlined"> Settings </span>
+        <span class="material-symbols-outlined" style="color: #ffc800">
+          Settings
+        </span>
       </button>
     </section>
+    <h2 class="doctor-title">Our Best Doctors</h2>
+    <div class="card-container">
+      <div class="card">
+        <img
+          src="/img/ashkan-forouzani-DPEPYPBZpB8-unsplash.jpg"
+          alt="Card Image"
+        />
+        <div class="overlay">
+          <div class="overlay-title">Dr. Askhan</div>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="/img/dalton-ngangi-ZCztndOWdjs-unsplash.jpg"
+          alt="Card Image"
+        />
+        <div class="overlay">
+          <div class="overlay-title">Dr. Askhan</div>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="/img/bruno-rodrigues-279xIHymPYY-unsplash.jpg"
+          alt="Card Image"
+        />
+        <div class="overlay">
+          <div class="overlay-title">Dr. Askhan</div>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="/img/linkedin-sales-solutions-pAtA8xe_iVM-unsplash.jpg"
+          alt="Card Image"
+        />
+        <div class="overlay">
+          <div class="overlay-title">Dr. Askhan</div>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <script src="/src/js/main.js"></script>
   </body>
 </html>

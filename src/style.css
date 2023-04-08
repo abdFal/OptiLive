@@ -1,13 +1,24 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
 body {
-  font-family: "Euclid Circular A", "Poppins";
+  font-family: "Quicksand", "Poppins";
 }
 
 :root {
   --popover-height: 36px;
+  --transition: all 0.4s ease;
 }
 
 * {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  display: none;
 }
 /* popover */
 .popoverr {
@@ -162,6 +173,95 @@ h3 {
   border-radius: 6px;
 }
 /* end popover */
+
+/* header */
+.header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url("/img/jeshoots-com-l0j0DHVWcIE-unsplash.jpg");
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-content {
+  position: absolute;
+  text-align: center;
+  width: 69%;
+  color: #fff;
+}
+.header-content h1 {
+  font-family: "Poppins";
+  font-weight: 5;
+  font-size: 2.9rem;
+}
+.header-content p {
+  font-weight: 200;
+  margin-bottom: 10px;
+}
+.header-btn {
+  padding: 9px 7px;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  transition: var(--transition);
+}
+.header-btn:hover {
+  color: #111;
+  background-color: #fff;
+}
+
+/* about */
+.about {
+  background-color: #00cba9;
+}
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Mengatur grid dengan dua kolom yang sama lebar */
+  gap: 20px; /* Mengatur jarak antara kolom */
+  max-width: 1200px; /* Mengatur lebar maksimum kontainer */
+  margin: 0 auto; /* Mengatur margin untuk kontainer berada di tengah */
+  padding: 40px; /* Mengatur padding pada kontainer */
+  color: #fff;
+}
+
+/* Gambar di sebelah kiri */
+.image {
+  grid-column: 1; /* Mengatur posisi kolom gambar */
+  justify-self: center; /* Mengatur gambar menjadi posisi tengah secara horizontal */
+}
+
+/* Teks di sebelah kanan */
+.text {
+  grid-column: 2; /* Mengatur posisi kolom teks */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Mengatur teks menjadi posisi tengah secara vertikal */
+}
+
+/* Judul */
+.text h1 {
+  font-family: "Open Sans";
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+/* Paragraf */
+.text p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Gambar responsif */
+figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 17px;
+}
+/* menu */
 .dropdown-btn {
   position: relative;
 }
@@ -195,7 +295,7 @@ nav {
   gap: 20px;
   background: #ffffff;
   width: 100%;
-  height: 60px;
+  height: 70px;
   padding: 0 20px;
   box-shadow: 0 2px 4px -1px rgba(57, 76, 96, 0.15);
 }
