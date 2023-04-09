@@ -1,4 +1,4 @@
-// Animate Make Clients Happy count
+// Animate 1
 var clientsCount = document.getElementById("clients-count");
 var clientsCounter = 0;
 var clientsInterval = setInterval(function () {
@@ -7,9 +7,9 @@ var clientsInterval = setInterval(function () {
   if (clientsCounter == 15000) {
     clearInterval(clientsInterval);
   }
-}, 5);
+}, 3);
 
-// Animate Our Clients count
+// Animate 2
 var ourClientsCount = document.getElementById("our-clients-count");
 var ourClientsCounter = 0;
 var ourClientsInterval = setInterval(function () {
@@ -18,4 +18,4 @@ var ourClientsInterval = setInterval(function () {
   if (ourClientsCounter == 80000) {
     clearInterval(ourClientsInterval);
   }
-}, 10);
+}, 2);

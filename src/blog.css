@@ -1,0 +1,91 @@
+.blogs {
+  padding: 4rem 3.7rem;
+}
+.title-blogs {
+  text-align: center;
+  font-size: 2.3rem;
+  font-weight: bold;
+}
+.blogs-description {
+  text-align: center;
+  color: #00cba9;
+  font-size: 1.2rem;
+}
+.blog-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.blog {
+  margin-top: 2.3rem;
+  width: calc(25% - 10px);
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: relative;
+}
+
+.blog:hover .blog-img img {
+  transform: scale(1.01);
+}
+
+.blog-img {
+  position: relative;
+}
+
+.blog-img img {
+  transition: transform 0.5s;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.blog-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s;
+}
+
+.blog:hover .blog-overlay {
+  opacity: 1;
+}
+
+.blog-overlay a {
+  color: #fff;
+  font-size: 1.2em;
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: #333;
+  border-radius: 5px;
+}
+
+.blog-content {
+  padding: 10px;
+}
+
+.blog h3 {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .blog {
+    width: calc(50% - 10px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .blog {
+    width: 100%;
+  }
+}

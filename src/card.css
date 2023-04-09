@@ -3,16 +3,26 @@
   font-weight: bold;
   text-align: center;
 }
+.doctor-description {
+  text-align: center;
+  color: #00cba9;
+  font-size: 1.2rem;
+}
+.about-doctor {
+  font-size: 1.15rem;
+  text-align: center;
+}
 .card-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  padding: 0 1rem;
 }
 
 .card {
   position: relative;
-  margin: 20px;
+  margin: 4rem 20px 1.1rem 20px;
   width: 260px;
   height: 200px;
   overflow: hidden;
@@ -70,6 +80,16 @@
 }
 
 /* .auto-increment */
+.fact-title {
+  text-align: center;
+  font-size: 2.3rem;
+  font-weight: bold;
+}
+.fact-description {
+  text-align: center;
+  color: #00cba9;
+  font-size: 1.2rem;
+}
 .auto-increment {
   height: 80vh;
   display: flex;

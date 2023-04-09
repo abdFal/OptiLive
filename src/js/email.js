@@ -4,7 +4,7 @@ function kirim() {
   var fromName = document.getElementsByName("from_name")[0].value;
   var fromEmail = document.getElementsByName("from_email")[0].value;
   var templateParams = {
-    to_name: "Optilive",
+    to_name: "Optilife",
     from_name: fromName,
     from_email: fromEmail,
     subject: document.getElementsByName("subject")[0].value,
