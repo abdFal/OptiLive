@@ -26,12 +26,7 @@
     <nav>
       <i class="fa-sharp fa-solid fa-compass"></i>
       <i class="fa-solid fa-bars"></i>
-      <div class="dropdown-btn">
-        <a href="#" class="dropbtn">Explore</a>
-        <div class="dropdown-content"><a href="">Conntent</a></div>
-        <div class="dropdown-content"><a href="">Conntent</a></div>
-        <div class="dropdown-content"><a href="">Conntent</a></div>
-      </div>
+      <div class="logo">OptiLife</div>
       <div class="dropdown">
         <i class="search fa-solid fa-magnifying-glass"></i>
         <input
@@ -88,7 +83,7 @@
       <section class="about-content">
         <figure class="image">
           <img
-            src="/img/international-nurses-day-scaled.webp"
+            src="img/international-nurses-day-scaled.webp"
             alt="Gambar OptiLife"
           />
         </figure>
@@ -136,22 +131,22 @@
     </div>
     <section class="popoverr">
       <div class="popover">
-        <img src="/img/Family photo 1.jpg" width="30%" />
+        <img src="img/Family photo 1.jpg" width="30%" />
         <div class="popover-menu">
           <header>
-            <img src="/img/Family photo 1.jpg" width="30%" />
+            <img src="img/Family photo 1.jpg" width="30%" />
             <div>
               <h2>Saramiamiaw</h2>
               <h3>Tokyo, Japan</h3>
             </div>
           </header>
           <div class="images">
-            <img src="/img/benjamin-voros-phIFdC6lA4E-unsplash.jpg" />
-            <img src="/img/benjamin-voros-phIFdC6lA4E-unsplash.jpg" />
-            <img src="/img/benjamin-voros-phIFdC6lA4E-unsplash.jpg" />
-            <img src="/img/benjamin-voros-phIFdC6lA4E-unsplash.jpg" />
-            <img src="/img/benjamin-voros-phIFdC6lA4E-unsplash.jpg" />
-            <img src="/img/benjamin-voros-phIFdC6lA4E-unsplash.jpg" />
+            <img src="img/benjamin-voros-phIFdC6lA4E-unsplash.jpg" />
+            <img src="img/benjamin-voros-phIFdC6lA4E-unsplash.jpg" />
+            <img src="img/benjamin-voros-phIFdC6lA4E-unsplash.jpg" />
+            <img src="img/benjamin-voros-phIFdC6lA4E-unsplash.jpg" />
+            <img src="img/benjamin-voros-phIFdC6lA4E-unsplash.jpg" />
+            <img src="img/benjamin-voros-phIFdC6lA4E-unsplash.jpg" />
           </div>
         </div>
       </div>
@@ -180,7 +175,7 @@
     <div class="card-container">
       <div class="card">
         <img
-          src="/img/ashkan-forouzani-DPEPYPBZpB8-unsplash.jpg"
+          src="img/ashkan-forouzani-DPEPYPBZpB8-unsplash.jpg"
           alt="Card Image"
         />
         <div class="overlay">
@@ -192,7 +187,7 @@
       </div>
       <div class="card">
         <img
-          src="/img/dalton-ngangi-ZCztndOWdjs-unsplash.jpg"
+          src="img/dalton-ngangi-ZCztndOWdjs-unsplash.jpg"
           alt="Card Image"
         />
         <div class="overlay">
@@ -204,7 +199,7 @@
       </div>
       <div class="card">
         <img
-          src="/img/bruno-rodrigues-279xIHymPYY-unsplash.jpg"
+          src="img/bruno-rodrigues-279xIHymPYY-unsplash.jpg"
           alt="Card Image"
         />
         <div class="overlay">
@@ -216,7 +211,7 @@
       </div>
       <div class="card">
         <img
-          src="/img/linkedin-sales-solutions-pAtA8xe_iVM-unsplash.jpg"
+          src="img/linkedin-sales-solutions-pAtA8xe_iVM-unsplash.jpg"
           alt="Card Image"
         />
         <div class="overlay">
@@ -229,17 +224,21 @@
     </div>
     <div class="contact-us">
       <div class="form-container">
-        <h1>Form Kirim Pesan</h1>
-        <form action="#" method="post">
-          <label for="nama">Nama:</label>
-          <input type="text" id="nama" name="nama" required />
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
-          <label for="subjek">Subjek:</label>
-          <input type="text" id="subjek" name="subjek" required />
-          <label for="pesan">Pesan:</label>
-          <textarea id="pesan" name="pesan" required></textarea>
-          <button type="submit">Kirim</button>
+        <h1>Contact To Us</h1>
+        <form action="#">
+          <label for="from_name">Nama:</label>
+          <input type="text" id="from_name" name="from_name" required />
+          <label for="from_email">Email:</label>
+          <input type="email" id="from_email" name="from_email" required />
+          <label for="subject">Subjek:</label>
+          <input type="text" id="subject" name="subject" required />
+          <label for="message">Pesan:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+          <!-- HTML !-->
+          <!-- HTML !-->
+          <button class="button-87" type="button" onclick="kirim()">
+            Kirim
+          </button>
         </form>
       </div>
       <div class="map-container">
@@ -276,5 +275,12 @@
       </div>
     </div>
     <script src="/src/js/main.js"></script>
+    <script src="/src/js/email.js"></script>
+    <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init("iSpIqR58C30ehPrAg");
+      })();
+    </script>
   </body>
 </html>
