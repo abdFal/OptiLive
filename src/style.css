@@ -409,3 +409,62 @@ span {
 .menu button:hover span:last-child {
   opacity: 1;
 }
+
+/* contact */
+.contact-us {
+  display: flex;
+  gap: 20px;
+}
+
+.form-container {
+  flex: 1;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+}
+
+.form-container h1 {
+  margin-top: 0;
+}
+
+.form-container label,
+.form-container input,
+.form-container textarea {
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-container textarea {
+  height: 100px;
+}
+
+.form-container input:focus,
+.form-container textarea:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.form-container button {
+  margin-top: 10px;
+  width: auto;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-container button:hover {
+  background-color: #0056b3;
+}
+
+.map-container {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
