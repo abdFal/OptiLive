@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Quicksand:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Quicksand:wght@300;400;600;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
 body {
   font-family: "Quicksand", "Poppins";
@@ -20,6 +20,60 @@ html {
 ::-webkit-scrollbar {
   display: none;
 }
+/* loader */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00bdcb;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.preloader-text {
+  font-family: "Quicksand";
+  font-size: 36px;
+  font-weight: 800;
+  color: #fff;
+  animation: blink 1.5s infinite;
+  border-bottom: 1px solid white;
+}
+.preloader-logo {
+  font-size: 3rem;
+}
+@keyframes blink {
+  50% {
+    opacity: 0.02;
+  }
+}
+/* scrollup */
+.scroll-up-button {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 24px;
+  background-color: #ffffff;
+  color: #00cba9;
+  border-radius: 50%;
+  z-index: 9999;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.scroll-up-button:hover {
+  background-color: #00b0cb;
+  color: #fff;
+}
+
 /* opening*/
 .opening-container {
   max-width: 1200px;
@@ -85,6 +139,39 @@ html {
 }
 
 /* end opening */
+/* Fasilitas card styles */
+.fasilitas-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+.fasilitas-title {
+  font-size: 2.3rem;
+  font-weight: bold;
+  text-align: center;
+}
+.fasilitas-description {
+  text-align: center;
+  color: #00cba9;
+  font-size: 1.2rem;
+}
+.fasilitas-card {
+  width: 30%;
+  max-width: 300px;
+  text-align: center;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  margin: 5rem auto;
+}
+.fasilitas-card-title {
+  text-align: center;
+}
+.fasilitas-card img {
+  max-width: 100%;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
 /* popover */
 .popoverr {
   position: fixed;
@@ -125,16 +212,19 @@ html {
   font-size: 12px;
   border-radius: 4px;
   transition: 0.3s;
+  z-index: 100;
 }
 
 .popoverr button:hover::before {
   opacity: 1;
   visibility: visible;
   translate: 0 -50%;
+  z-index: 101;
 }
 
 .material-symbols-outlined {
   font-size: 18px;
+  z-index: 1000;
 }
 
 .popover {
@@ -164,6 +254,7 @@ html {
   background: #ffffff;
   box-shadow: 0 6px 50px rgb(0 0 0 / 16%);
   transition: 0.3s;
+  z-index: 102;
 }
 
 .popover-menu::after {
