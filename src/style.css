@@ -163,14 +163,24 @@ html {
   background-color: #f8f9fa;
   border-radius: 5px;
   margin: 5rem auto;
+  transition: all 0.3s ease;
 }
 .fasilitas-card-title {
   text-align: center;
+  transition: all 0.3s ease;
 }
 .fasilitas-card img {
   max-width: 100%;
   border-radius: 5px;
   margin-bottom: 1rem;
+}
+.fasilitas-card:hover {
+  background: #00cba9;
+  color: #fff;
+}
+
+.fasilitas-card:hover .fasilitas-card-title {
+  color: #fff;
 }
 /* popover */
 .popoverr {
@@ -183,6 +193,7 @@ html {
   gap: 8px;
   padding: 20px;
   cursor: pointer;
+  z-index: 100;
 }
 
 .popoverr button {
@@ -584,7 +595,20 @@ span {
 .menu button:hover span:last-child {
   opacity: 1;
 }
-
+/* brand */
+.brands {
+  text-align: center;
+  padding: 5.5rem 4.5rem 3.5rem 4.5rem;
+}
+.brands-title {
+  text-align: center;
+  color: #777;
+  margin: 1rem 0;
+}
+.brands img {
+  margin: auto;
+  filter: grayscale(1);
+}
 /* contact */
 .contact {
   background-color: #00cba9;
