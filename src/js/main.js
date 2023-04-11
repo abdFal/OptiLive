@@ -13,7 +13,7 @@ var clientsInterval = setInterval(function () {
   if (clientsCounter == 15000) {
     clearInterval(clientsInterval);
   }
-}, 2);
+}, 1);
 
 // Animate 2
 var ourClientsCount = document.getElementById("our-clients-count");
@@ -24,7 +24,7 @@ var ourClientsInterval = setInterval(function () {
   if (ourClientsCounter == 80000) {
     clearInterval(ourClientsInterval);
   }
-}, 1);
+}, 0.1);
 
 // scrollup-btn
 window.addEventListener("scroll", function () {

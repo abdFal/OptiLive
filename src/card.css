@@ -404,6 +404,7 @@ h3 {
   flex-wrap: wrap;
   align-items: center;
   gap: 3rem;
+  margin: 3.5rem auto;
 }
 .testimonial-person {
   font-weight: bold;
