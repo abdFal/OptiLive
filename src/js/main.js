@@ -36,7 +36,6 @@ window.addEventListener("scroll", function () {
     document.body.scrollTop ||
     0;
 
-  // Jika halaman sudah di-scroll sebanyak 100vh, munculkan tombol scroll up, jika tidak, sembunyikan tombol scroll up
   if (scrollPosition >= clientHeight) {
     document.querySelector(".scroll-up-button").style.display = "block";
   } else {

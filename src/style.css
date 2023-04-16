@@ -18,21 +18,7 @@ html {
   scroll-behavior: smooth;
 }
 ::-webkit-scrollbar {
-  width: 8px;
-}
-::-webkit-scrollbar-track {
-  background-color: #098284;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #00e5bf;
-  border-radius: 5px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #11ffd7;
+  display: none;
 }
 /* loader */
 .preloader {
@@ -46,6 +32,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1000;
 }
 
 .preloader-text {
@@ -88,113 +75,149 @@ html {
   color: #fff;
 }
 
-/* opening*/
-.opening-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 5rem;
+/* navbar */
+.nav-logo {
+  width: 3%;
+  margin-bottom: -4px;
+}
+
+nav {
   display: flex;
   align-items: center;
+  gap: 20px;
+  background: #ffffff;
+  width: 100%;
+  height: 70px;
+  padding: 0 20px;
+  box-shadow: 0 2px 4px -1px rgba(57, 76, 96, 0.15);
 }
 
-.logo {
-  flex-basis: 30%;
+.burger {
+  width: 16px;
+  height: 16px;
+}
+
+.dropdown {
+  position: relative;
+  width: 200px;
+  height: 40px;
+}
+
+.cari,
+.search {
+  position: absolute;
+}
+
+.cari {
+  z-index: 2;
+  top: 2px;
+  height: 36px;
+  width: 238px;
+  border: 1px solid #dfe4e7;
+  outline: none;
+  padding-left: 34px;
+  border-radius: 4px;
+  background: transparent;
+  font-family: inherit;
+  font-size: 12px;
+}
+
+.search {
+  top: 13px;
+  left: 10px;
+  z-index: 3;
+  width: 16px;
+  height: 16px;
+  pointer-events: none;
+}
+
+.cari:focus {
+  border-color: transparent;
+}
+
+.menu {
+  z-index: 1;
+  position: absolute;
+  height: 40px;
+  width: 100%;
+  transition-property: width;
+  transition-duration: 0.3s;
+}
+
+.cari:focus ~ .menu {
+  box-shadow: 0 0px 8px 0 rgba(57, 76, 96, 0.18);
+  height: 170px;
+  width: 290px;
+  padding-top: 40px;
+  border-radius: 4px;
+  background: #fff;
+}
+
+.cari:focus ~ .menu .menu-content {
+  visibility: visible;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.menu-content {
+  position: absolute;
+  width: inherit;
+  visibility: hidden;
+  opacity: 0;
+  border-top: 1px solid #dfe4e7;
+}
+
+.menu button {
   display: flex;
-  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+  padding: 12px 10px;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  font-size: 13px;
 }
 
-.logo img {
-  max-width: 100%;
-  height: auto;
+.menu button img {
+  width: 16px;
+  height: 16px;
 }
 
-.quotes {
-  flex-basis: 70%;
+.menu button:hover {
+  background: #f0f1f3;
 }
 
-.quotes blockquote {
-  text-align: center;
-  font-size: 24px;
-  color: #00cba9;
-  margin: 0;
-  padding: 0;
+span {
+  white-space: nowrap;
 }
 
-.content {
-  text-align: center;
-  margin: 0 auto;
-  width: 60%;
+.menu button span:last-child {
+  opacity: 0;
+  font-size: 10px;
+  color: rgba(0, 0, 0, 0.4);
 }
 
-.content h1 {
-  font-size: 36px;
-  color: #333;
+.menu button:hover span:last-child {
+  opacity: 1;
 }
 
-.content p {
-  font-size: 18px;
-  color: #777;
-  margin-bottom: 30px;
+@media screen and (max-width: 500px) {
+  nav {
+    gap: 30px;
+  }
+  .nav-logo,
+  .logo {
+    display: none;
+  }
+  .cari {
+    width: 208px;
+  }
 }
-
-.button {
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 18px;
-  color: #fff;
-  background-color: #007bff;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-.button:hover {
-  background-color: #0056b3;
-}
-
-/* end opening */
-/* Fasilitas card styles */
-.fasilitas-container {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 2rem;
-}
-.fasilitas-title {
-  font-size: 2.3rem;
-  font-weight: bold;
-  text-align: center;
-}
-.fasilitas-description {
-  text-align: center;
-  color: #00cba9;
-  font-size: 1.2rem;
-}
-.fasilitas-card {
-  width: 30%;
-  max-width: 300px;
-  text-align: center;
-  padding: 20px;
-  background-color: #f8f9fa;
-  border-radius: 5px;
-  margin: 5rem auto;
-  transition: all 0.3s ease;
-}
-.fasilitas-card-title {
-  text-align: center;
-  transition: all 0.3s ease;
-}
-.fasilitas-card img {
-  max-width: 100%;
-  border-radius: 5px;
-  margin-bottom: 1rem;
-}
-.fasilitas-card:hover {
-  background: #00cba9;
-  color: #fff;
-}
-
-.fasilitas-card:hover .fasilitas-card-title {
-  color: #fff;
+@media screen and (max-width: 431px) {
+  .logoo {
+    display: none;
+  }
 }
 /* popover */
 .popoverr {
@@ -354,7 +377,6 @@ h3 {
   border-radius: 6px;
 }
 /* end popover */
-
 /* header */
 .header {
   position: relative;
@@ -394,6 +416,78 @@ h3 {
   color: #111;
   background-color: #fff;
 }
+/* end header */
+/* opening*/
+.opening-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  flex-basis: 30%;
+  display: flex;
+  justify-content: center;
+}
+
+.logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+.quotes {
+  flex-basis: 70%;
+}
+
+.quotes blockquote {
+  text-align: center;
+  font-size: 24px;
+  color: #00cba9;
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  text-align: center;
+  margin: 0 auto;
+  width: 60%;
+}
+
+.content h1 {
+  font-size: 36px;
+  color: #333;
+}
+
+.content p {
+  font-size: 18px;
+  color: #777;
+  margin-bottom: 30px;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #007bff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+@media screen and (max-width: 780px) {
+  .quotes blockquote {
+    font-size: 17px;
+  }
+}
+
+/* end opening */
 
 /* about */
 .about {
@@ -457,136 +551,83 @@ figure img {
 .wavee {
   margin-top: -1rem;
 }
-/* menu */
-.nav-logo {
-  width: 3%;
-  margin-bottom: -4px;
+
+@media screen and (max-width: 780px) {
+  .about-content {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 35px;
+  }
+  .image {
+    grid-column: 1;
+  }
+  .text {
+    grid-column: 1;
+    padding: 0 2.5rem;
+  }
 }
 
-nav {
+/* end about */
+
+/* Fasilitas card styles */
+#fasilitas {
+  margin-top: 2rem;
+}
+.fasilitas-container {
   display: flex;
-  align-items: center;
-  gap: 20px;
-  background: #ffffff;
-  width: 100%;
-  height: 70px;
-  padding: 0 20px;
-  box-shadow: 0 2px 4px -1px rgba(57, 76, 96, 0.15);
+  flex-wrap: wrap;
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
+}
+.fasilitas-title {
+  font-size: 2.3rem;
+  font-weight: bold;
+  text-align: center;
+}
+.fasilitas-description {
+  text-align: center;
+  color: #00cba9;
+  font-size: 1.2rem;
+}
+.fasilitas-card {
+  width: 30%;
+  max-width: 300px;
+  text-align: center;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  margin: 5rem auto;
+  transition: all 0.3s ease;
+}
+.fasilitas-card-title {
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.fasilitas-card img {
+  max-width: 100%;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+.fasilitas-card:hover {
+  background: #00cba9;
+  color: #fff;
 }
 
-.burger {
-  width: 16px;
-  height: 16px;
+.fasilitas-card:hover .fasilitas-card-title {
+  color: #fff;
 }
 
-.dropdown {
-  position: relative;
-  width: 200px;
-  height: 40px;
+@media screen and (max-width: 650px) {
+  .fasilitas-card {
+    width: 70%;
+    max-width: 1000rem;
+    margin: 3.5rem auto 4rem auto;
+  }
 }
 
-.cari,
-.search {
-  position: absolute;
-}
-
-.cari {
-  z-index: 2;
-  top: 2px;
-  height: 36px;
-  width: 238px;
-  border: 1px solid #dfe4e7;
-  outline: none;
-  padding-left: 34px;
-  border-radius: 4px;
-  background: transparent;
-  font-family: inherit;
-  font-size: 12px;
-}
-
-.search {
-  top: 13px;
-  left: 10px;
-  z-index: 3;
-  width: 16px;
-  height: 16px;
-  pointer-events: none;
-}
-
-.cari:focus {
-  border-color: transparent;
-}
-
-.menu {
-  z-index: 1;
-  position: absolute;
-  height: 40px;
-  width: 100%;
-  transition-property: width;
-  transition-duration: 0.3s;
-}
-
-.cari:focus ~ .menu {
-  box-shadow: 0 0px 8px 0 rgba(57, 76, 96, 0.18);
-  height: 170px;
-  width: 290px;
-  padding-top: 40px;
-  border-radius: 4px;
-  background: #fff;
-}
-
-.cari:focus ~ .menu .menu-content {
-  visibility: visible;
-  opacity: 1;
-  transition: 0.3s;
-}
-
-.menu-content {
-  position: absolute;
-  width: inherit;
-  visibility: hidden;
-  opacity: 0;
-  border-top: 1px solid #dfe4e7;
-}
-
-.menu button {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  width: 100%;
-  padding: 12px 10px;
-  background: transparent;
-  border: 0;
-  cursor: pointer;
-  font-size: 13px;
-}
-
-.menu button img {
-  width: 16px;
-  height: 16px;
-}
-
-.menu button:hover {
-  background: #f0f1f3;
-}
-
-span {
-  white-space: nowrap;
-}
-
-.menu button span:last-child {
-  opacity: 0;
-  font-size: 10px;
-  color: rgba(0, 0, 0, 0.4);
-}
-
-.menu button:hover span:last-child {
-  opacity: 1;
-}
 /* brand */
 .brands {
   text-align: center;
-  padding: 7rem 4.9rem 3.5rem 4.9rem;
+  padding: 7rem 4.9rem 7rem 4.9rem;
 }
 .brands-title {
   text-align: center;
@@ -597,6 +638,13 @@ span {
   margin: auto;
   filter: grayscale(1);
 }
+
+@media screen and (max-width: 650px) {
+  .brands {
+    padding: 7rem 1.5rem 7rem 1.5rem;
+  }
+}
+
 /* contact */
 .contact {
   background-color: #00cba9;
@@ -687,6 +735,29 @@ span {
 
 .button-87:active {
   transform: scale(0.95);
+}
+
+@media (max-width: 780px) {
+  .contact-us {
+    flex-direction: column;
+  }
+}
+
+/* Tambahkan CSS ini untuk membuat form-container dan map-container menjadi flexbox pada ukuran layar di bawah 650px */
+@media (max-width: 650px) {
+  .form-container,
+  .map-container {
+    padding: 20px;
+    width: auto;
+  }
+}
+
+/* Tambahkan CSS ini untuk mengatur ukuran form-container dan map-container menjadi 100% pada ukuran layar di bawah 480px */
+@media (max-width: 480px) {
+  .form-container,
+  .map-container {
+    padding: 10px;
+  }
 }
 
 /* footer styling */

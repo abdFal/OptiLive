@@ -22,7 +22,8 @@
   margin-top: 4rem;
   width: calc(23% - 10px);
   margin-bottom: 20px;
-  border-radius: 5px;
+  border-radius: 15px;
+  border: 0.1px solid #d4fffc;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   position: relative;
@@ -77,6 +78,12 @@
 .blog h3 {
   font-size: 1.2em;
   margin-bottom: 20px;
+}
+
+@media screen and (max-width: 780px) {
+  .blogs {
+    padding: 6.1rem 1.5rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
