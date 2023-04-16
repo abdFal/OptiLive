@@ -46,6 +46,9 @@ html {
 .preloader-logo {
   font-size: 3rem;
 }
+.no-scroll {
+  overflow: hidden;
+}
 @keyframes blink {
   50% {
     opacity: 0.02;
@@ -491,8 +494,21 @@ h3 {
   .quotes blockquote {
     font-size: 17px;
   }
+  .content {
+    width: 85%;
+  }
+  .content h1 {
+    margin-bottom: 1.3rem;
+  }
 }
-
+@media screen and (max-width: 500px) {
+  .opening-container {
+    display: block;
+  }
+  .opening-container .logo {
+    margin-bottom: 1rem;
+  }
+}
 /* end opening */
 
 /* about */
@@ -568,7 +584,7 @@ figure img {
   }
   .text {
     grid-column: 1;
-    padding: 0 2.5rem;
+    padding: 0 1rem;
   }
 }
 
