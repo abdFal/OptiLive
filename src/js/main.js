@@ -2,16 +2,7 @@
 window.addEventListener("load", function () {
   var preloader = document.querySelector(".preloader");
   preloader.style.display = "none";
-
-  document.body.addEventListener("click", function (event) {
-    event.preventDefault();
-  });
-
-  document.body.addEventListener("scroll", function (event) {
-    event.preventDefault();
-  });
-
-  document.body.style.pointerEvents = "none";
+  document.body.classList.remove("no-scroll"); // Menghapus kelas "no-scroll" dari elemen body saat loading selesai
 });
 
 // Animate 1
