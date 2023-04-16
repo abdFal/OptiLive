@@ -2,6 +2,16 @@
 window.addEventListener("load", function () {
   var preloader = document.querySelector(".preloader");
   preloader.style.display = "none";
+
+  document.body.style.overflow = "auto";
+
+  document.body.addEventListener("click", function (event) {
+    event.preventDefault();
+  });
+
+  document.body.addEventListener("scroll", function (event) {
+    event.preventDefault();
+  });
 });
 
 // Animate 1

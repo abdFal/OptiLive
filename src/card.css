@@ -306,7 +306,7 @@ h3 {
 }
 @media screen and (max-width: 500px) {
   .data-container {
-    width: 400px;
+    width: 380px;
   }
   .value {
     font-size: 12px;
@@ -338,6 +338,9 @@ h3 {
 @media screen and (max-width: 431px) {
   .diabetes {
     display: none;
+  }
+  .data-container {
+    width: 320px;
   }
 }
 /* button start */

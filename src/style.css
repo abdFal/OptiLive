@@ -376,6 +376,12 @@ h3 {
   object-fit: cover;
   border-radius: 6px;
 }
+
+@media screen and (max-width: 600px) {
+  .popoverr {
+    right: -25px;
+  }
+}
 /* end popover */
 /* header */
 .header {
