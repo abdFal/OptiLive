@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Quicksand:wght@300;400;600&display=swap");
 .blogs {
+  margin-top: 60px;
   padding: 6rem 3.7rem;
 }
 .title-blogs {

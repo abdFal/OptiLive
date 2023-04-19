@@ -422,12 +422,6 @@ h3 {
   font-weight: bold;
   text-align: center;
 }
-.our-media {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 30px;
-}
 
 .button-64 {
   align-items: center;
