@@ -25,7 +25,7 @@ var ourClientsInterval = setInterval(function () {
   if (ourClientsCounter == 80000) {
     clearInterval(ourClientsInterval);
   }
-}, 0.1);
+}, 1);
 
 // scrollup-btn
 window.addEventListener("scroll", function () {
